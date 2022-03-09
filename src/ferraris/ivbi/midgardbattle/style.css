@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+
+*{
+    -fx-font-family: 'Skranji', cursive;
+    -fx-text-fill: white;
+}
+
+#bg{
+    -fx-background-image: url("file:resources/background.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+#bg-2{
+    -fx-background-image: url("file:resources/background2.jpg");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.btnGioca{
+    -fx-background-color: #3193A5;
+    -fx-background-radius: 79px;
+    -fx-font-size: 36px;
+    -fx-text-fill: white;
+}
+
+.btn{
+    -fx-font-size: 30px;
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-width: 5px;
+    -fx-border-color: white;
+    -fx-border-radius: 61px;
+}
+
+.btnGioca:hover{
+    -fx-background-color: #147688;
+}
+
+.btn:hover{
+    -fx-text-fill: black;
+    -fx-background-color: white;
+    -fx-background-radius: 79px;
+}
+.choice-box {
+  -fx-background-color: #3193A5;
+  -fx-mark-color: white;
+}
+
+.choice-box > .label { 
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.choice-box .context-menu { -fx-background-color: white; }
+.choice-box .menu-item:focused { -fx-background-color: #3193A5; }
+.choice-box .menu-item > .label { 
+    -fx-text-fill: black;
+    -fx-font-size: 20px;
+}
+.choice-box .menu-item:focused > .label { -fx-text-fill: white; }
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-radius: 3px; 
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+.check-box:selected .box {
+    -fx-background-color: #3193A5;
+}
+.check-box > .box > .mark {
+    -fx-padding: 8px;
+}
+.check-box > .box {
+    -fx-padding: 8px;
+}
