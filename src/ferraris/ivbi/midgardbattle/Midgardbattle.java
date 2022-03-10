@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXML.java to edit this template
- */
+
 package ferraris.ivbi.midgardbattle;
 
 import ferraris.ivbi.midgardbattle.music.Music;
@@ -11,11 +8,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  *
- * @author Utente
+ * @author Enrico
  */
 public class Midgardbattle extends Application {
     
@@ -32,7 +28,7 @@ public class Midgardbattle extends Application {
         FXMLLoginController controller = loader.getController();
         controller.setMusic(music);
         
-        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("style/style.css").toExternalForm());
         
         Image icon = new Image("file:resources/icon.png");
         stage.getIcons().add(icon);
@@ -47,10 +43,5 @@ public class Midgardbattle extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-    }
-    
-    public Music getMusic(){
-        return this.music;
-    }
-    
+    }    
 }

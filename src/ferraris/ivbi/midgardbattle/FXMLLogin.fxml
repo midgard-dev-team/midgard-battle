@@ -19,7 +19,7 @@
             </ImageView>
             <VBox alignment="CENTER" layoutY="306.0" prefHeight="364.0" prefWidth="1192.0" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="297.0" styleClass="btnGioca" text="GIOCA" />
+                  <Button mnemonicParsing="false" onAction="#handleGioca" prefHeight="60.0" prefWidth="297.0" styleClass="btnGioca" text="GIOCA" />
                   <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="297.0" styleClass="btn" text="Regolamento" />
                   <Button fx:id="btnSettings" mnemonicParsing="false" onAction="#handleSettings" prefHeight="60.0" prefWidth="297.0" styleClass="btn" text="Impostazioni" />
                </children>

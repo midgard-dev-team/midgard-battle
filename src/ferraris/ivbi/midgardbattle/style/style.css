@@ -78,3 +78,35 @@
 .check-box > .box {
     -fx-padding: 8px;
 }
+
+.btnAttacca{
+    -fx-background-color: #3193A5;
+    -fx-background-radius: 79px;
+    -fx-font-size: 26px;
+    -fx-text-fill: white;
+    -fx-border-width: 5px;
+    -fx-border-color: #3193A5;
+    -fx-border-radius: 61px;
+}
+.btnLog{
+    -fx-font-size: 26px;
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-width: 5px;
+    -fx-border-color: white;
+    -fx-border-radius: 61px;
+}
+
+.btnAttacca:hover{
+    -fx-background-color: #147688;
+}
+
+.btnLog:hover{
+    -fx-text-fill: black;
+    -fx-background-color: white;
+    -fx-background-radius: 79px;
+}
+
+.base-text{
+    -fx-font-size: 17px;
+}

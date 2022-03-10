@@ -93,7 +93,23 @@ public class FXMLLoginController implements Initializable {
         
         Timeline timeline = new Timeline();
         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-        KeyFrame kf = new KeyFrame(Duration.seconds(0.5), kv);
+        KeyFrame kf = new KeyFrame(Duration.seconds(0.4), kv);
+        timeline.getKeyFrames().add(kf);
+        timeline.play();
+    }
+
+    @FXML
+    private void handleGioca(ActionEvent event) throws IOException {
+        
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLGame.fxml"));
+        Scene scene = btnSettings.getScene();
+        
+        root.translateYProperty().set(scene.getHeight());
+        stackPane.getChildren().add(root);
+        
+        Timeline timeline = new Timeline();
+        KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
+        KeyFrame kf = new KeyFrame(Duration.seconds(0.4), kv);
         timeline.getKeyFrames().add(kf);
         timeline.play();
     }
