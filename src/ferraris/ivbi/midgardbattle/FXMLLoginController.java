@@ -1,6 +1,8 @@
 
 package ferraris.ivbi.midgardbattle;
 
+import static ferraris.ivbi.midgardbattle.Midgardbattle.music;
+import ferraris.ivbi.midgardbattle.model.Model;
 import ferraris.ivbi.midgardbattle.music.Music;
 import java.io.IOException;
 import java.net.URL;
@@ -29,7 +31,7 @@ import javafx.util.Duration;
  * @author Enrico
  */
 public class FXMLLoginController implements Initializable {
-    private Music music;
+    private Model model;
     @FXML private CheckBox checkBoxMusica;
     @FXML private AnchorPane rootPane;
     @FXML private StackPane stackPane;
@@ -42,51 +44,33 @@ public class FXMLLoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         imgSpeaker.setImage(unmute);
-        checkBoxMusica.setSelected(true);
+        checkBoxMusica.setVisible(false);
     }    
     
-    public void setMusic(Music m){
-        this.music = m;
-    }
-    
     @FXML
-    public void change(ActionEvent event){
+    private void change(MouseEvent event) {
         if(checkBoxMusica.isSelected()){
-            music.soundtrack_unmute();
-            imgSpeaker.setImage(unmute);
-        }else{
+            model.setMusic_toggle(false);
             music.soundtrack_mute();
             imgSpeaker.setImage(mute);
+            checkBoxMusica.setSelected(false);
+        }else{
+            model.setMusic_toggle(true);
+            music.soundtrack_unmute();
+            imgSpeaker.setImage(unmute);
+            checkBoxMusica.setSelected(true);
         }
-    }
-
-    private void handleSfx(MouseEvent event) {
-        music.sfx();
     }
 
     @FXML
     private void handleSettings(ActionEvent event) throws IOException {
-        /*AnchorPane pane = FXMLLoader.load(getClass().getResource("FXMLSettings.fxml"));
-        rootPane.getChildren().setAll(pane);
-        pane.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         
-        FXMLLoader loader  = new FXMLLoader(getClass().getResource("FXMLSettings.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSettings.fxml"));
         Parent root = loader.load();
-        Scene scene = new Scene(root);
-        
-        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-        
-        Stage stage = new Stage();
-        
-        Image icon = new Image("file:resources/icon.png");
-        stage.getIcons().add(icon);
-        stage.setResizable(false);
-        stage.setTitle("Midgard Battle - Settings");
-        stage.setScene(scene);
-        stage.show();*/
-        
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLSettings.fxml"));
         Scene scene = btnSettings.getScene();
+        FXMLSettingsController controller = loader.getController();
+        controller.setModel(model);
+        controller.setLoginController(this);
         
         root.translateYProperty().set(scene.getHeight());
         stackPane.getChildren().add(root);
@@ -101,16 +85,38 @@ public class FXMLLoginController implements Initializable {
     @FXML
     private void handleGioca(ActionEvent event) throws IOException {
         
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLGame.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLGame.fxml"));
+        Parent root = loader.load();
         Scene scene = btnSettings.getScene();
         
-        root.translateYProperty().set(scene.getHeight());
+        FXMLGameController controller = loader.getController();
+        controller.setModel(model);
+        
+        root.translateYProperty().set(0-scene.getHeight());
         stackPane.getChildren().add(root);
         
         Timeline timeline = new Timeline();
-        KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-        KeyFrame kf = new KeyFrame(Duration.seconds(0.4), kv);
+        KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_OUT);
+        KeyFrame kf = new KeyFrame(Duration.seconds(0.3), kv);
         timeline.getKeyFrames().add(kf);
         timeline.play();
     }
+    
+    public void setModel(Model m){
+        this.model = m;
+        checkBoxMusica.setSelected(model.isMusic_toggle());
+        
+    }
+    
+    public void setCheckBox(boolean b){
+        checkBoxMusica.setSelected(b);
+        if(b == false) imgSpeaker.setImage(mute);
+        else imgSpeaker.setImage(unmute);
+    }
+
+    @FXML
+    private void handleInfo(ActionEvent event) {
+    }
+
+
 }

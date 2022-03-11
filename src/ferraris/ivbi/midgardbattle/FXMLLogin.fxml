@@ -20,12 +20,12 @@
             <VBox alignment="CENTER" layoutY="306.0" prefHeight="364.0" prefWidth="1192.0" spacing="10.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#handleGioca" prefHeight="60.0" prefWidth="297.0" styleClass="btnGioca" text="GIOCA" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="297.0" styleClass="btn" text="Regolamento" />
+                  <Button mnemonicParsing="false" onAction="#handleInfo" prefHeight="60.0" prefWidth="297.0" styleClass="btn" text="Info" />
                   <Button fx:id="btnSettings" mnemonicParsing="false" onAction="#handleSettings" prefHeight="60.0" prefWidth="297.0" styleClass="btn" text="Impostazioni" />
                </children>
             </VBox>
-            <CheckBox fx:id="checkBoxMusica" layoutX="48.0" layoutY="583.0" mnemonicParsing="false" onAction="#change" textFill="WHITE" />
-            <ImageView fx:id="imgSpeaker" fitHeight="48.0" fitWidth="46.0" layoutX="87.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+            <CheckBox fx:id="checkBoxMusica" layoutX="48.0" layoutY="583.0" mnemonicParsing="false" textFill="WHITE" />
+            <ImageView fx:id="imgSpeaker" fitHeight="48.0" fitWidth="46.0" layoutX="1097.0" layoutY="576.0" onMouseClicked="#change" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@file:resources/img/mute.png" />
                </image>

@@ -1,6 +1,7 @@
 
 package ferraris.ivbi.midgardbattle;
 
+import ferraris.ivbi.midgardbattle.model.Model;
 import ferraris.ivbi.midgardbattle.music.Music;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -25,8 +26,9 @@ public class Midgardbattle extends Application {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         
+        Model model = new Model();
         FXMLLoginController controller = loader.getController();
-        controller.setMusic(music);
+        controller.setModel(model);
         
         scene.getStylesheets().add(getClass().getResource("style/style.css").toExternalForm());
         

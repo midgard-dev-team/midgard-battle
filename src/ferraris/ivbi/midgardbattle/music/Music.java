@@ -5,10 +5,6 @@ import java.nio.file.Paths;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
-/**
- *
- * @author Enrico
- */
 public class Music extends Thread{
     private String soundtrack_path = "resources/music/soundtrack.mp3";
     private String sfx_path = "resources/music/hover_sfx.mp3";
@@ -18,6 +14,7 @@ public class Music extends Thread{
     public void soundtrack_play(){
         st.play();
         st.setVolume(1);
+        st.setCycleCount(100);
     }
     
     public void soundtrack_mute(){

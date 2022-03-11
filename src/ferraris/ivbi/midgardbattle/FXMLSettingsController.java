@@ -1,6 +1,7 @@
 
 package ferraris.ivbi.midgardbattle;
 
+import ferraris.ivbi.midgardbattle.model.Model;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -18,6 +19,8 @@ import javafx.scene.layout.StackPane;
  */
 public class FXMLSettingsController implements Initializable {
 
+    private Model model;
+    private FXMLLoginController loginController;
     @FXML private AnchorPane root;
     @FXML private CheckBox checkBoxMusica;
     @FXML private Button btnSalva;
@@ -29,7 +32,6 @@ public class FXMLSettingsController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        checkBoxMusica.setSelected(true);
         
         choiceBoxDimensione.getItems().addAll(dimCampo);
         choiceBoxTruppe.getItems().addAll(numTruppe);
@@ -39,18 +41,39 @@ public class FXMLSettingsController implements Initializable {
     private void switchMusic(ActionEvent event) {
         if(checkBoxMusica.isSelected()){
             Midgardbattle.music.soundtrack_unmute();
+            model.setMusic_toggle(true);
         }else{
             Midgardbattle.music.soundtrack_mute();
+            model.setMusic_toggle(false);
         }
     }
 
     @FXML
     private void handleSalva(ActionEvent event) {
         StackPane stackPane = (StackPane) btnSalva.getScene().getRoot();
+        loginController.setCheckBox(checkBoxMusica.isSelected());
         stackPane.getChildren().remove(root);
+        try{
+            model.setDim_campo(Integer.parseInt(choiceBoxDimensione.getValue()));   
+        }catch(Exception e){
+            model.setDim_campo(6);
+        }
+        try{
+            model.setNum_truppe(Integer.parseInt(choiceBoxTruppe.getValue()));
+        }catch(Exception e){
+            model.setNum_truppe(6);
+        }
+    }
+    
+    public void setModel(Model m){
+        this.model = m;
+        checkBoxMusica.setSelected(model.isMusic_toggle());
         
-        //Stage stage = (Stage) btnSalva.getScene().getWindow();
-        //stage.close();
+
+    }
+    
+    public void setLoginController(FXMLLoginController c){
+        this.loginController = c;
     }
     
 }
