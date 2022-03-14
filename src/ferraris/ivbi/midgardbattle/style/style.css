@@ -97,16 +97,18 @@
     -fx-border-radius: 61px;
 }
 
-.btnAttacca:hover{
-    -fx-background-color: #147688;
-}
+.btnAttacca:hover { -fx-background-color: #147688; }
 
-.btnLog:hover{
+.btnLog:hover {
     -fx-text-fill: black;
     -fx-background-color: white;
     -fx-background-radius: 79px;
 }
 
-.base-text{
-    -fx-font-size: 17px;
-}
+.base-text { -fx-font-size: 17px; }
+
+.cornice:hover { -fx-effect: dropshadow(three-pass-box, #dbbe45, 10, 0, 0, 0); }
+
+.log { -fx-text-fill: black; }
+
+.glow:hover { -fx-effect: dropshadow(three-pass-box, #dbbe45, 20, 0, 0, 0);}

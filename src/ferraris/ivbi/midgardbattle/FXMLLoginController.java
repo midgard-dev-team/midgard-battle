@@ -3,7 +3,7 @@ package ferraris.ivbi.midgardbattle;
 
 import static ferraris.ivbi.midgardbattle.Midgardbattle.music;
 import ferraris.ivbi.midgardbattle.model.Model;
-import ferraris.ivbi.midgardbattle.music.Music;
+import ferraris.ivbi.midgardbattle.music.Sfx;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -34,7 +34,7 @@ public class FXMLLoginController implements Initializable {
     private Model model;
     @FXML private CheckBox checkBoxMusica;
     @FXML private AnchorPane rootPane;
-    @FXML private StackPane stackPane;
+    @FXML public StackPane stackPane;
     @FXML private Button btnSettings;
     @FXML private ImageView imgSpeaker;
     
@@ -85,12 +85,13 @@ public class FXMLLoginController implements Initializable {
     @FXML
     private void handleGioca(ActionEvent event) throws IOException {
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLGame.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLSchieramento.fxml"));
         Parent root = loader.load();
         Scene scene = btnSettings.getScene();
         
-        FXMLGameController controller = loader.getController();
+        FXMLSchieramentoController controller = loader.getController();
         controller.setModel(model);
+        controller.setStackPane(stackPane);
         
         root.translateYProperty().set(0-scene.getHeight());
         stackPane.getChildren().add(root);
@@ -116,6 +117,14 @@ public class FXMLLoginController implements Initializable {
 
     @FXML
     private void handleInfo(ActionEvent event) {
+    }
+
+    @FXML
+    private void sfxPlay(MouseEvent event) {
+        if(model.getSfxOnOff()){
+            Sfx sfx = new Sfx();
+            sfx.start();
+        }
     }
 
 

@@ -13,12 +13,32 @@ public abstract class Entita extends Button {
     protected Image image;
     protected Image miniAsset;
     protected boolean haconbattuto;
+    protected boolean morto;
+    protected boolean spostato;
 
     public Entita() {
         Random r=new Random();
         this.esperienza_combattimento = r.nextInt(10)+1;
         this.forza_di_combattimento = 0;
         this.haconbattuto = false;
+        this.morto = false;
+        this.spostato = false;
+    }
+
+    public boolean isSpostato() {
+        return spostato;
+    }
+
+    public void setSpostato(boolean spostato) {
+        this.spostato = spostato;
+    }
+
+    public boolean isMorto() {
+        return morto;
+    }
+
+    public void setMorto(boolean morto) {
+        this.morto = morto;
     }
 
     public boolean isHaconbattuto() {

@@ -9,6 +9,10 @@ public class Vuoto extends Entita{
     private final Image img = new Image("file:resources/img/empty-land.png");
     private final Image mini = new Image("file:resources/img/empty.png");
     
+    public Vuoto(){
+        this.schieramento = "neutro";
+    }
+    
     @Override
     public int calcola_forza() {
         setForza_di_combattimento(0);

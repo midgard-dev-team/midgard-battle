@@ -5,6 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -12,16 +13,19 @@
    <children>
       <AnchorPane id="bg" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1192.0">
          <children>
-            <ImageView fitHeight="264.0" fitWidth="462.0" layoutX="365.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="file:resources/scritta-login.png" />
-               </image>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="314.0" prefWidth="1192.0">
+                <ImageView fitHeight="264.0" fitWidth="462.0" layoutX="365.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="file:resources/scritta-login.png" />
+                </image>
             </ImageView>
+            </HBox>
+
             <VBox alignment="CENTER" layoutY="306.0" prefHeight="364.0" prefWidth="1192.0" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#handleGioca" prefHeight="60.0" prefWidth="297.0" styleClass="btnGioca" text="GIOCA" />
-                  <Button mnemonicParsing="false" onAction="#handleInfo" prefHeight="60.0" prefWidth="297.0" styleClass="btn" text="Info" />
-                  <Button fx:id="btnSettings" mnemonicParsing="false" onAction="#handleSettings" prefHeight="60.0" prefWidth="297.0" styleClass="btn" text="Impostazioni" />
+                  <Button mnemonicParsing="false" onAction="#handleGioca" onMouseEntered="#sfxPlay" prefHeight="60.0" prefWidth="297.0" styleClass="btnGioca" text="GIOCA" />
+                  <Button mnemonicParsing="false" onAction="#handleInfo" onMouseEntered="#sfxPlay" prefHeight="60.0" prefWidth="297.0" styleClass="btn" text="Info" />
+                  <Button fx:id="btnSettings" mnemonicParsing="false" onAction="#handleSettings" onMouseEntered="#sfxPlay" prefHeight="60.0" prefWidth="297.0" styleClass="btn" text="Impostazioni" />
                </children>
             </VBox>
             <CheckBox fx:id="checkBoxMusica" layoutX="48.0" layoutY="583.0" mnemonicParsing="false" textFill="WHITE" />

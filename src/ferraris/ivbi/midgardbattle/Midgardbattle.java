@@ -10,10 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-/**
- *
- * @author Enrico
- */
 public class Midgardbattle extends Application {
     
     public static Music music;
@@ -40,9 +36,6 @@ public class Midgardbattle extends Application {
         stage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }    

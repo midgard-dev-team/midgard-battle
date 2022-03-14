@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="bg-2" fx:id="anchorPane" onMouseClicked="#close" prefHeight="670.0" prefWidth="1192.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ferraris.ivbi.midgardbattle.VittoriaSconfittaController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="670.0" prefWidth="1192.0" spacing="100.0">
+         <children>
+            <ImageView fx:id="imgVincitore" fitHeight="194.0" fitWidth="565.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../resources/img/vittoria.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="lblVincitore" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#close" text="Vince il bene!" textAlignment="CENTER">
+               <font>
+                  <Font size="51.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></VBox>
+   </children>
+</AnchorPane>

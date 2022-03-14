@@ -21,7 +21,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
          <children>
-            <GridPane fx:id="griglia_campo" hgap="5.0" maxHeight="650.0" maxWidth="650.0" vgap="5.0" HBox.hgrow="ALWAYS">
+            <GridPane fx:id="griglia_campo" maxHeight="650.0" maxWidth="650.0" HBox.hgrow="ALWAYS">
               <columnConstraints>
                 <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" />
                 <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" />
@@ -66,7 +66,7 @@
                               <Label fx:id="lblTrubbeMale" styleClass="base-text" text="Truppe del Male:" />
                            </children>
                         </VBox>
-                        <Button fx:id="btnAvvia" mnemonicParsing="false" onAction="#handleAvvia" prefHeight="66.0" prefWidth="132.0" styleClass="btnAttacca" text="Avvia">
+                        <Button fx:id="btnAvvia" mnemonicParsing="false" onAction="#handleAvvia" onMouseEntered="#sfxPlay" prefHeight="66.0" prefWidth="132.0" styleClass="btnAttacca" text="Avvia">
                            <HBox.margin>
                               <Insets left="85.0" top="20.0" />
                            </HBox.margin></Button>
@@ -88,7 +88,7 @@
                            <children>
                               <Label fx:id="lblForza" styleClass="base-text" text="Forza:" />
                               <Label fx:id="lblEsperienza" styleClass="base-text" text="Esperienza:" />
-                              <TextArea fx:id="areaLog" prefHeight="315.0" prefWidth="194.0">
+                              <TextArea fx:id="areaLog" prefHeight="315.0" prefWidth="194.0" styleClass="log">
                                  <VBox.margin>
                                     <Insets top="10.0" />
                                  </VBox.margin>
@@ -99,15 +99,15 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
                      <children>
-                        <Button fx:id="btnAttacca" mnemonicParsing="false" prefHeight="66.0" prefWidth="181.0" styleClass="btnAttacca" text="AVANZA" />
-                        <Button fx:id="apriChiudLog" mnemonicParsing="false" onAction="#handleLog" prefHeight="66.0" prefWidth="132.0" styleClass="btnLog" text="Log">
+                        <Button fx:id="btnAvanza" mnemonicParsing="false" onAction="#avanza" onMouseEntered="#sfxPlay" prefHeight="66.0" prefWidth="181.0" styleClass="btnAttacca" text="AVANZA" />
+                        <Button fx:id="apriChiudLog" mnemonicParsing="false" onAction="#handleLog" onMouseEntered="#sfxPlay" prefHeight="66.0" prefWidth="132.0" styleClass="btnLog" text="Log">
                            <HBox.margin>
                               <Insets left="30.0" />
                            </HBox.margin>
                         </Button>
                         <CheckBox fx:id="checkBoxMute" mnemonicParsing="false">
                            <HBox.margin>
-                              <Insets left="30.0" />
+                              <Insets left="10.0" />
                            </HBox.margin>
                         </CheckBox>
                         <ImageView fx:id="imgMute" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#change" pickOnBounds="true" preserveRatio="true" />
