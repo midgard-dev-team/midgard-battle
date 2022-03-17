@@ -49,4 +49,12 @@ public class Eroe extends Entita{
         return (50*esperienza_combattimento)+(50*energia_vitale);
     }
     
+    public void setEnergiaVitale(int v){
+        this.energia_vitale = v;
+    }
+    
+    public int getEnergiaVitale(){
+        return this.energia_vitale;
+    }
+    
 }

@@ -11,23 +11,25 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Midgardbattle extends Application {
-    
+
     public static Music music;
+
     @Override
     public void start(Stage stage) throws Exception {
-        music = new Music();
+        String documentBase = getHostServices().getDocumentBase();
+        music = new Music(documentBase);
         music.soundtrack_play();
-        
-        FXMLLoader loader  = new FXMLLoader(getClass().getResource("FXMLLogin.fxml"));
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLogin.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        
+
         Model model = new Model();
         FXMLLoginController controller = loader.getController();
         controller.setModel(model);
-        
+
         scene.getStylesheets().add(getClass().getResource("style/style.css").toExternalForm());
-        
+
         Image icon = new Image("file:resources/icon.png");
         stage.getIcons().add(icon);
         stage.setResizable(false);
@@ -38,5 +40,5 @@ public class Midgardbattle extends Application {
 
     public static void main(String[] args) {
         launch(args);
-    }    
+    }
 }

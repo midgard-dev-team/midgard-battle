@@ -17,8 +17,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 public class FXMLSchieramentoController implements Initializable {
@@ -28,7 +28,7 @@ public class FXMLSchieramentoController implements Initializable {
     
     @FXML private ImageView imgBene;
     @FXML private ImageView imgMale;
-    @FXML private VBox anchorPane;
+    @FXML private AnchorPane anchorPane;
 
 
     @Override

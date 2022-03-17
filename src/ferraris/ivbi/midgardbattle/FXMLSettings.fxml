@@ -5,11 +5,13 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -20,7 +22,7 @@
          <children>
             <ImageView fitHeight="81.0" fitWidth="410.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@file:resources/scritta-impostazioni.png" />
+                  <Image url="file:resources/scritta-impostazioni.png" />
                </image>
                <VBox.margin>
                   <Insets top="50.0" />
@@ -54,13 +56,18 @@
                         <Font size="37.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="checkBoxMusica" mnemonicParsing="false" onAction="#switchMusic" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="625.0" text="Effetti sonori:" GridPane.rowIndex="3">
                      <font>
                         <Font size="37.0" />
                      </font>
                   </Label>
                   <CheckBox fx:id="checkBoxSfx" mnemonicParsing="false" onAction="#switchSfx" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <CheckBox fx:id="checkBoxMusica" mnemonicParsing="false" onAction="#switchMusic" />
+                        <Slider fx:id="musicSlider" blockIncrement="0.1" max="1.0" />
+                     </children>
+                  </HBox>
                </children>
                <VBox.margin>
                   <Insets left="100.0" right="100.0" top="100.0" />

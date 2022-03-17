@@ -30,6 +30,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
@@ -51,11 +52,11 @@ public class FXMLGameController implements Initializable {
     @FXML private Label lblForza;
     @FXML private Label lblEsperienza;
     @FXML private Button btnAvanza;
+    @FXML private AnchorPane scenaGioco;
     
     private Image mute = new Image("file:resources/img/mute.png");
     private Image unmute = new Image("file:resources/img/speaker.png");
     private Image graveStone = new Image("file:resources/img/death.png");
-    private ImageView vuoto = new ImageView(new Image("file:resources/img/empty.png"));
     
     private ImageView image;
     private int indexBattaglie = 0;
@@ -162,7 +163,8 @@ public class FXMLGameController implements Initializable {
                         }
                         if(b.getClass().getSimpleName().equals("Eroe")){
                             Eroe e = (Eroe) b;
-                            nomeTruppa.setText(""+e.getNome().toUpperCase()+": "+b.getSchieramento()); 
+                            nomeTruppa.setText(""+e.getNome().toUpperCase()+": "+b.getSchieramento());
+                            lblEsperienza.setText(lblEsperienza.getText()+"\nVitalità: "+e.getEnergiaVitale());
                         }
                     }
                 });
@@ -210,7 +212,7 @@ public class FXMLGameController implements Initializable {
             Parent root = loader.load();
             Scene scene = btnAvanza.getScene();
             VittoriaSconfittaController controller = loader.getController();
-            controller.setModel(model, stackPane);
+            controller.setModel(model, stackPane, scenaGioco);
 
             root.translateYProperty().set(0-scene.getHeight());
             stackPane.getChildren().add(root);
@@ -230,7 +232,7 @@ public class FXMLGameController implements Initializable {
             Scene scene = btnAvanza.getScene();
 
             VittoriaSconfittaController controller = loader.getController();
-            controller.setModel(model, stackPane);
+            controller.setModel(model, stackPane, scenaGioco);
 
             root.translateYProperty().set(0-scene.getHeight());
             stackPane.getChildren().add(root);

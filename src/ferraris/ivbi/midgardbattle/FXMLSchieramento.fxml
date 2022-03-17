@@ -7,13 +7,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="bg-2" prefHeight="670.0" prefWidth="1192.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ferraris.ivbi.midgardbattle.FXMLSchieramentoController">
+<AnchorPane id="bg-2" fx:id="anchorPane" prefHeight="670.0" prefWidth="1192.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ferraris.ivbi.midgardbattle.FXMLSchieramentoController">
    <children>
-      <VBox fx:id="anchorPane" alignment="TOP_CENTER" prefHeight="670.0" prefWidth="1192.0">
+      <VBox alignment="TOP_CENTER" prefHeight="670.0" prefWidth="1192.0">
          <children>
             <ImageView id="bg-2" fitHeight="186.0" fitWidth="592.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@file:resources/scritta-schieramento.png" />
+                  <Image url="file:resources/scritta-schieramento.png" />
                </image>
             </ImageView>
             <HBox prefHeight="571.0" prefWidth="1192.0">
@@ -22,7 +22,7 @@
                      <children>
                         <ImageView fx:id="imgBene" fitHeight="854.0" fitWidth="436.0" onMouseClicked="#apriGiocoBene" onMouseEntered="#sfx" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@file:resources/img/screen-bet/bene.png" />
+                              <Image url="file:resources/img/screen-bet/bene.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -31,7 +31,7 @@
                      <children>
                         <ImageView fx:id="imgMale" fitHeight="854.0" fitWidth="436.0" onMouseClicked="#apriGiocoMale" onMouseEntered="#sfx" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@file:resources/img/screen-bet/male.png" />
+                              <Image url="file:resources/img/screen-bet/male.png" />
                            </image>
                         </ImageView>
                      </children>

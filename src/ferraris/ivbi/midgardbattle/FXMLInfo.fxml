@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ferraris.ivbi.midgardbattle.FXMLInfoController">
+   <children>
+      <TabPane prefHeight="670.0" prefWidth="1192.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Come si gioca?">
+            <content>
+              <AnchorPane id="bg-2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="99.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Il gioco è ambientato tra le strade e gli insidiosi campi della Terra di Mezzo (middle earth/midgard). Tramite le impostazioni, è possibile selezionare la grandezza del campo da battaglia e il numero di entità da generare per ogni schieramento. Successivamente, ti verrà chiesto per quale fazione vuoi fare il tifo, bene o male. A questo punto può avere inizio il gioco vero e proprio, difatti premendo avanza i personaggi attaccheranno le entità nemiche, se si trovano nelle loro vicinanze, altrimenti si sposteranno di una casella verso il centro. In un combattiamento vince colui che ha la forza maggiore, il perdente muore ed è fuori dai giochi. L'entità che vince incrementa la sua esperienza di combattimento di 1, aumentando di conseguenza anche la sua forza d'attacco. Il gioco, inoltre, prevede la comparsa fortuita di due eroi che combattono per le loro fazioni, la possibilità che essi compaiano è molto bassa, tuttavia dispongono di un'elevata forza determinata anche dalla loro energia vitale. Vince, infine, l'ultimo schieramento rimasto in campo." textAlignment="JUSTIFY" wrappingWidth="633.3333129882812" />
+                        <Label layoutX="99.0" layoutY="59.0" styleClass="titoli" text="Come si gioca?" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Personaggi">
+               <content>
+                  <ScrollPane id="bg-2" prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="2676.0" prefWidth="1175.0" spacing="20.0">
+                           <children>
+                              <Label styleClass="titoli" text="Truppe del Bene">
+                                 <font>
+                                    <Font size="34.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="elfo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/elfo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="ELFO">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Amanti dell’arte, delle canzoni e della conoscenza. Combattono affinché il bene prevalga" wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="hobbit" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/hobbit.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="HOBBIT">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Molto più minuti degli uomini, hanno sensi molto acuti e piedi pelosi con la pelle molto spessa. Non amano la guerra, ma per il bene combatteranno." wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="uomo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/uomo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="UOMO">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Secondo popolo ad apparire nella Terra di Mezzo, essi sono simili agli elfi, ma col il dono del libero arbitrio." wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="nano" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/nano.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="NANO">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Simili agli Uomini ma di piccola taglia e robusti, sono grandi lavoratori. Leali a che gli è leale ma vendicativi se offesi, combattono per il bene" wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Label styleClass="titoli" text="Eroi del Bene">
+                                 <font>
+                                    <Font size="34.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="gandalf" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/nano.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="GANDALF">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="All’apparenza un normale vecchio con un cappello blu a punta, è in realtà il capo del Bianco coniglio e capo della Compagnia dell’Anello. Combatte le Ombre (il male) affinché il bene prevalga." wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="elrond" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/nano.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="ELROND">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Mezz’elfo, signore di Gran Burrone. È il più potente Elfo rimasto nella terra di mezzo nella terza era. Sa combattere ma anche curare. Combatte per la vincita del bene" wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="aragorn" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/nano.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="ARAGORN">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Ultimo discendete di Elendil e Isildur, è un uomo molto alto e di bell’aspetto. La sua voce profonda e imperiosa cela in realtà una personalità gentile e altruista. Combatte insieme a Gandalf per il bene" wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Label styleClass="titoli" text="Truppe del Male">
+                                 <font>
+                                    <Font size="34.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="orco" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/nano.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="ORCO">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Piccoli e grotteschi, sono tanto ingegnosi quanti malvagi. Odiano la luce del sole. Non si curano della loro esistenza perché si riproducono molto velocemente. Combattono per il male." wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="urukhai" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/nano.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="URUKHAI">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Simili agli orchi, ma molto più alti e resistenti. Sono una razza creata per fini bellici. Sopportano la luce del sole ed amano vantarsi. Come gli orchi, combatto per il male." wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="sudrone" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/nano.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="SUDRONE">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Popolo grande, numeroso, ma soprattutto crudeli. Sono di carnagione scura, alti e feroci in battaglia. Indossano vestiti rossi o neri con piastrine d’ottone. Anche loro combattono per il male." wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Label styleClass="titoli" text="Eroi del Male">
+                                 <font>
+                                    <Font size="34.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="saruman" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/nano.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="SARUMAN">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Capo del Bianco Consiglio, l’alto in comando dei Popoli liberi. Apparentemente Pacifico è in realtà malvagio e doppiogiochista. Vuole essere al potere di tutta la terra di mezzo. Combatte per il male" wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="sauron" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/nano.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="SAURON">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Oscuro signore di Mordor, è uno spirito potentissimo e malvagio. Vuole l’Anello per conquistare prima la Terra di mezzo e poi il mondo intero. Non combatte per il male, è lui il male." wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fx:id="nazgul" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../resources/img/mini-assets/nano.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="150.0" prefWidth="534.0">
+                                       <children>
+                                          <Label styleClass="titoli" text="NAZGUL">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="paragrafo" text="Detti anche Spiriti dell’Anello, sono i Cavalieri Neri. Non hanno un corpo visibile e sono obbligati a indossare grandi manti neri. Cavalcano cavalli addestrati dalle arti oscure. Combattono per il male." wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets top="50.0" />
+                           </padding></VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+          </Tab>
+            <Tab text="Crediti">
+              <content>
+                <AnchorPane id="bg-2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="604.0" prefWidth="1192.0">
+                           <children>
+                              <Label styleClass="titoli" text="Crediti">
+                                 <VBox.margin>
+                                    <Insets top="50.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label styleClass="paragrafo" text="Gioco &quot;La battaglia dell Terra di Mezzo&quot; realizzato da">
+                                 <VBox.margin>
+                                    <Insets top="50.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label styleClass="titoli" text="Cristaudo Enrico, Pennisi Fabrizio, Torrisi Oscar" />
+                              <Label styleClass="paragrafo" text="IISS &quot;Galileo Ferraris&quot; - Acireale, Classe 4BI a.s. 2021/2022" />
+                              <Label styleClass="paragrafo" text="Musica">
+                                 <VBox.margin>
+                                    <Insets top="40.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label styleClass="titoli" text="The Lion's Heart - Paul Dinletir, Audiomachine" />
+                              <Label styleClass="paragrafo" text="Immagini">
+                                 <VBox.margin>
+                                    <Insets top="40.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label styleClass="titoli" text="www.pinterest.com" />
+                              <Label styleClass="paragrafo" text="Effetti Sonori">
+                                 <VBox.margin>
+                                    <Insets top="40.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label styleClass="titoli" text="www.soundsnap.com" />
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab onSelectionChanged="#esci" text="ESCI">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

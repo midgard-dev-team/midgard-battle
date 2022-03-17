@@ -31,7 +31,7 @@
             <CheckBox fx:id="checkBoxMusica" layoutX="48.0" layoutY="583.0" mnemonicParsing="false" textFill="WHITE" />
             <ImageView fx:id="imgSpeaker" fitHeight="48.0" fitWidth="46.0" layoutX="1097.0" layoutY="576.0" onMouseClicked="#change" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@file:resources/img/mute.png" />
+                  <Image url="file:resources/img/mute.png" />
                </image>
             </ImageView>
          </children>

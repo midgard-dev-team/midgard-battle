@@ -112,3 +112,63 @@
 .log { -fx-text-fill: black; }
 
 .glow:hover { -fx-effect: dropshadow(three-pass-box, #dbbe45, 20, 0, 0, 0);}
+
+.tab-pane .tab-header-area .tab-header-background { -fx-background-color: black; }
+.tab-pane .tab-header-area { -fx-padding: 10px; }
+
+.tab-pane { -fx-tab-min-width: 120px; }
+
+.tab{ 
+    -fx-background-insets: 1 1 1 1,0,0; 
+    -fx-padding: 10px;
+}
+
+.tab-pane .tab { -fx-background-color: transparent; }
+
+.tab-pane .tab:selected { -fx-background-color: transparent }
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 0 0 2 0;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}
+.scroll-pane > .viewport { -fx-background-color: transparent; }
+
+.titoli { -fx-font-size: 25px; }
+.paragrafo { 
+    -fx-font-size: 16px;
+    -fx-fill: white;
+}
+
+.scroll-pane { -fx-background-color: black; }
+
+.scroll-bar:horizontal, .scroll-bar:vertical{ -fx-background-color:transparent; }
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: white;
+    -fx-background-radius: 5em;
+}

@@ -9,10 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -24,7 +21,7 @@ public class VittoriaSconfittaController implements Initializable {
 
     private Model model;
     private StackPane stackPane;
-    
+    private AnchorPane scenaGioco;
     @FXML private AnchorPane anchorPane;
     @FXML private Label lblVincitore;
     @FXML private ImageView imgVincitore;
@@ -35,18 +32,15 @@ public class VittoriaSconfittaController implements Initializable {
     }    
 
     @FXML
-    private void close(MouseEvent event) throws IOException {
-        stackPane.getChildren().clear();
-        FXMLLoader loader  = new FXMLLoader(getClass().getResource("FXMLLogin.fxml"));
-        Parent root = loader.load();
-        
-        FXMLLoginController controller = loader.getController();
-        controller.setModel(model);
-                
-        stackPane.getChildren().add(root);
+    private void close(MouseEvent event) throws IOException {                
+        stackPane.getChildren().remove(scenaGioco);
+        stackPane.getChildren().remove(anchorPane);
+
+        model.setSpawn(false);
+    
     }
     
-    public void setModel(Model m, StackPane stackpane){
+    public void setModel(Model m, StackPane stackpane, AnchorPane scena){
         this.model = m;
         if(model.getVincitore().equalsIgnoreCase(model.getBet())){
             imgVincitore.setImage(new Image("file:resources/img/vittoria.png"));
@@ -55,6 +49,7 @@ public class VittoriaSconfittaController implements Initializable {
         }
         lblVincitore.setText("VINCE IL "+model.getVincitore().toUpperCase()+"!");
         this.stackPane = stackpane;
+        this.scenaGioco = scena;
     }
     
 }

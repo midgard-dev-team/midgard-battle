@@ -116,7 +116,22 @@ public class FXMLLoginController implements Initializable {
     }
 
     @FXML
-    private void handleInfo(ActionEvent event) {
+    private void handleInfo(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLInfo.fxml"));
+        Parent root = loader.load();
+        Scene scene = btnSettings.getScene();
+        
+        FXMLInfoController controller = loader.getController();
+        controller.setModel(stackPane);
+        
+        root.translateYProperty().set(0-scene.getHeight());
+        stackPane.getChildren().add(root);
+        
+        Timeline timeline = new Timeline();
+        KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_OUT);
+        KeyFrame kf = new KeyFrame(Duration.seconds(0.3), kv);
+        timeline.getKeyFrames().add(kf);
+        timeline.play();
     }
 
     @FXML
