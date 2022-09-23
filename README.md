@@ -1,6 +1,6 @@
 # Midgard Battle
 
-Midgard Battle is a minigame made with JavaFX during our 4th year of high school
+Midgard Battle is a minigame made with JavaFX during our 4th year of high school.
 ## Installation
 
 All you have to do is going to [releases](https://github.com/midgard-dev-team/midgard-battle/releases/tag/v.0.1) and follow the steps.
